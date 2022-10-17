@@ -3,6 +3,7 @@ Electrocardiogram (ECG) artifact contamination often occurs in surface electromy
 
 # Environment
 This project is built on Python 3.6. You can run the following command to install all the packages listed in the requirements.txt:
+    
     pip3 install -r requirements.txt
 
 # Database
@@ -13,13 +14,28 @@ Please download the database on these websites first:
 # Preprocessing and noisy dataset establishment 
 
 To extract ECG and sEMG from the database, please execute preprocessing.sh file.
-
+        
 # Train models to remove ECG artifacts from sEMG 
 
 Please execute the following command:
 
-# Test model performance
+    python main.py 
+    --mode train 
+    --train_path </path/to/training/data> 
+    --writer </path/to/logs> 
+    --model <Model_name> (e.g. FNC_01)
 
-Please execute the following command:
+# Test performance 
 
-For more information, please refer to the paper.
+To test the performance of ECG removal methods (NN models / IIR filters / template subtraction), please execute the following command:
+
+    python main.py 
+    --mode test 
+    --train_path </path/to/training/data> 
+    --test_clean </path/to/testing/noisy/data> 
+    --test_noisy </path/to/testing/clean/data> 
+    --writer </path/to/logs> 
+    --model <Model_name> (e.g. FNC_01)
+    --task: <method> (e.g. evaluate_HP/evaluate_FTSHP, default is the denoise NN models)
+     
+For more information, please refer to this paper.
