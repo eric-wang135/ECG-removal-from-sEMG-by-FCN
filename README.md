@@ -18,7 +18,8 @@ Please download the database on these websites first:
 # Preprocessing and generate the noisy dataset
 
 To extract specific channels ECG and sEMG data from the downloaded database, please refer to the files 'clean_ecg.py' and 'clean_emg.py'.
-To generate noisy sEMG dataset, please refer to the file 'mixture.py' and execute the file 'gen_pt_aug.py' by the following command:
+
+To generate noisy sEMG dataset, please refer to 'mixture.py' and execute 'gen_pt_aug.py' by the following command:
 
     python gen_pt_aug.py 
     --noisy_path </path/to/noisy/data>
