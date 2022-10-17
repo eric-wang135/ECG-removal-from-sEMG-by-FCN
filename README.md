@@ -30,7 +30,7 @@ Please execute the following command:
     --mode train 
     --train_path </path/to/training/data> 
     --writer </path/to/logs> 
-    --model <Model_name> (e.g. FNC_01)
+    --model <model_name> (e.g. FNC_01)
 
 # Testing  
 
@@ -42,7 +42,7 @@ To test the performance of ECG removal methods (NN models / IIR filters / templa
     --test_clean </path/to/testing/noisy/data> 
     --test_noisy </path/to/testing/clean/data> 
     --writer </path/to/logs> 
-    --model <Model_name> (e.g. FNC_01)
+    --model <model_name> (e.g. FNC_01)
     --task: <method> (e.g. evaluate_HP/evaluate_FTSHP, default is the denoise NN models)
  
 # Experimnetal Results
