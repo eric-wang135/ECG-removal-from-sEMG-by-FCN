@@ -49,7 +49,10 @@ To test the performance of ECG removal methods (NN models / IIR filters / templa
     --task: <method> (e.g. evaluate_HP/evaluate_FTSHP, default is the denoise NN models)
  
 # Experimnetal Results
-![Results](https://user-images.githubusercontent.com/85327689/196136734-723cb1e1-9ac3-456b-a08b-6e70010525c2.png)
+
+<p align="center">
+<img src="image/Results.png" align="center" width="500" >
+</p>
 
   
 For more information, please refer to this paper.
