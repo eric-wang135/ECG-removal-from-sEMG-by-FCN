@@ -13,8 +13,15 @@ Please download the database on these websites first:
 
 # Preprocessing and generate the noisy dataset
 
-To extract ECG and sEMG from the database and form noisy training datasets, please execute the Preparation.sh file.
-        
+To extract specific channels ECG and sEMG data from the downloaded database, please refer to the files 'clean_ecg.py' and 'clean_emg.py'.
+
+To generate noisy sEMG dataset, please refer to the file 'mixture.py' and execute the following command:
+
+    python gen_pt_aug.py 
+    --noisy_path </path/to/noisy/data>
+    --clean_path </path/to/clean/data> 
+    --out_path </path/to/training/data> 
+   
 # Train models to remove ECG artifacts from sEMG 
 
 Please execute the following command:
