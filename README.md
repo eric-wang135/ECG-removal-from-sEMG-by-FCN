@@ -11,9 +11,9 @@ Please download the database on these websites first:
 1. ECG: [MIT-BIH Normal Sinus Rhythm Database](https://www.physionet.org/content/nsrdb/1.0.0/) 
 2. sEMG: [NINAPro database DB2](http://ninaweb.hevs.ch/node/17)
 
-# Preprocessing and noisy dataset establishment 
+# Preprocessing and generate the noisy dataset
 
-To extract ECG and sEMG from the database, please execute preprocessing.sh file.
+To extract ECG and sEMG from the database and form noisy training datasets, please execute the Preparation.sh file.
         
 # Train models to remove ECG artifacts from sEMG 
 
@@ -25,7 +25,7 @@ Please execute the following command:
     --writer </path/to/logs> 
     --model <Model_name> (e.g. FNC_01)
 
-# Test performance 
+# Testing  
 
 To test the performance of ECG removal methods (NN models / IIR filters / template subtraction), please execute the following command:
 
@@ -37,5 +37,10 @@ To test the performance of ECG removal methods (NN models / IIR filters / templa
     --writer </path/to/logs> 
     --model <Model_name> (e.g. FNC_01)
     --task: <method> (e.g. evaluate_HP/evaluate_FTSHP, default is the denoise NN models)
-     
+ 
+# Results
+
+![waveform_noisy_samescale](https://user-images.githubusercontent.com/85327689/196135839-bdbcc6a4-18d9-45ce-aa1e-85392c22aad9.png)
+
+  
 For more information, please refer to this paper.
