@@ -28,10 +28,10 @@ def read_emg(emg_path,channel,restimulus=False):
     return y_clean, y_restimulus
 
 Corpus_path = '../EMG_DB2/'
-exercise = 2
-channel = [9,10,11,12]
+exercise = 1 #2
+channel = [2] #[9,10,11,12]
 EMG_data_num = 40
-cross_channel = False#True
+cross_channel = False 
 segment = 60 # unit: second
 points_per_seg = segment * 1000 # fs = 1000 Hz
 
