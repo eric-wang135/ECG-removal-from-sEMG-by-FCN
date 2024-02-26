@@ -61,21 +61,21 @@ def add_noise(clean_path, noise_path, SNR, return_info=False, normalize=False):
 
 
 
-# Training and validation set parameters
+# This part is used for creating training and validation set
 
-clean_paths,noise_paths = ["data_E1_S40_Ch2_withSTI_seg60s_nsrd/train/clean","./data_E1_S40_Ch2_withSTI_seg60s_nsrd/val/clean"],["../ECG_Ch1_fs1000_bp_training","../ECG_Ch1_fs1000_bp_training"]
+clean_paths,noise_paths = ["./data_E1_S40_Ch2_withSTI_seg60s_nsrd/train/clean","./data_E1_S40_Ch2_withSTI_seg60s_nsrd/val/clean"], ["../ECG_Ch1_fs1000_bp_training","../ECG_Ch1_fs1000_bp_training"]
 exercise = 1
 channel = [2]
 EMG_data_num = 40
-#clean_paths,noise_paths = ["./data_E1_S40_Ch2_withSTI_seg60s_nsrd/train/clean","./data_E1_S40_Ch2_withSTI_seg60s_nsrd/val/clean"], ["../ECG_Ch1_fs1000_bp_training","../ECG_Ch1_fs1000_bp_training"]
 noise_paths =  ["../ECG_Ch1_fs1000_bp_training","../ECG_Ch1_fs1000_bp_training"]
 SNR_list = [-5,-7,-9,-11,-13,-15] # Training SNR
 num_of_copy = [10,5]
 cross_channel = False
 test = False
 normalize = False
+
 """
-# Testing set parameters
+# This part is used for creating test set
 clean_paths,noise_paths = ["./data_E2_S40_Ch11_withSTI_seg60s_nsrd/test/clean"], ["../ECG_Ch1_fs1000_bp_testing"]
 exercise = 2
 channel = [9,10,11,12]
