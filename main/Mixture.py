@@ -62,16 +62,16 @@ def add_noise(clean_path, noise_path, SNR, return_info=False, normalize=False):
 
 
 # Training and validation set parameters
-"""
-clean_paths,noise_paths = ["./data_E1_S40_Ch2_seg60s_ptb_ver2/train/clean","./data_E1_S40_Ch2_seg60s_ptb_ver2/val/clean"],["../ECG_Ch1_fs1000_bp_training","../ECG_Ch1_fs1000_bp_training"]
+
+clean_paths,noise_paths = ["data_E1_S40_Ch2_withSTI_seg60s_nsrd/train/clean","./data_E1_S40_Ch2_withSTI_seg60s_nsrd/val/clean"],["../ECG_Ch1_fs1000_bp_training","../ECG_Ch1_fs1000_bp_training"]
 exercise = 1
-channel = [1,2]
+channel = [2]
 EMG_data_num = 40
 #clean_paths,noise_paths = ["./data_E1_S40_Ch2_withSTI_seg60s_nsrd/train/clean","./data_E1_S40_Ch2_withSTI_seg60s_nsrd/val/clean"], ["../ECG_Ch1_fs1000_bp_training","../ECG_Ch1_fs1000_bp_training"]
 noise_paths =  ["../ECG_Ch1_fs1000_bp_training","../ECG_Ch1_fs1000_bp_training"]
 SNR_list = [-5,-7,-9,-11,-13,-15] # Training SNR
 num_of_copy = [10,5]
-cross_channel = True
+cross_channel = False
 test = False
 normalize = False
 """
@@ -86,6 +86,7 @@ noise_paths = ["../ECG_Ch1_fs1000_bp_testing"]
 test = True
 cross_channel = False
 ###
+"""
 
 normalize = False # Output noisy EMG without normalization. Set to False in building testing set.
 sti = True
