@@ -56,4 +56,4 @@ To test the performance of ECG removal methods (NN models / IIR filters/template
 </p>
 
   
-For more information, please refer to this paper.
+For more information, please refer to [our paper](https://ieeexplore.ieee.org/abstract/document/10096409).
